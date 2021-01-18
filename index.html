@@ -5,34 +5,60 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Fire UI CSS -->
-    <link rel="stylesheet" type="text/css" href="FireUI.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@fire-ui/fire-ui@0.2.2/FireUI.min.css">
     <!-- Additional CSS -->
     <link rel="stylesheet" href="style.css">
     <!-- Fire UI Javascript -->
-    <script src="FireUI.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fire-ui/fire-ui@0.2.2/FireUI.min.js"></script>
     <link rel="shortcut icon" href="profile-picture.png" type="image/x-icon">
-    <title>Hello, world!</title>
+    <title>Hello World!</title>
 </head>
-<body theme="light">
+<body data-theme="light">
     <div class="topnav theme-reverse topnav-shadow">
         <span class="topnav-brand">My Name</span>
-        <span class="topnav-hamburger-menu" data-target = "myTopnav">&#x2630;</span>
+        <span class="topnav-hamburger-menu" data-target="myTopnav">&#x2630;</span>
         <div class="topnav-right" id="myTopnav">
             <a class="topnav-item" href="">Home</a>
             <a class="topnav-item" href="#achievement">Achievements</a>
             <a class="topnav-item" href="#contact">Contact</a>
-            <p class="topnav-item" switch-theme>Switch theme</p>
+            <a class="topnav-item" data-switch-theme="light, dark, aqua, sky, phoenix, indigo, teal">Switch theme</a>
         </div>
     </div>
+    <div class="box bold"><marquee direction="right" data-speed="7">Welcome to my Profile Page</marquee></div>
     <div class="container mt-5">
         <div class="row">
             <div class="col-6">
-                <img src="profile-picture.png" alt="My profile picture">
+                <div class="slideshow-container">
+                    <div class="slideshow">
+                        <img src="https://cdn.spacetelescope.org/archives/images/wallpaper2/heic2007a.jpg">
+                        <span class="slideshow-caption">Caption One</span>
+                    </div>
+                
+                    <div class="slideshow slideshow-none">
+                        <img src="https://images.ctfassets.net/hrltx12pl8hq/4plHDVeTkWuFMihxQnzBSb/aea2f06d675c3d710d095306e377382f/shutterstock_554314555_copy.jpg">
+                        <span class="slideshow-caption">Caption Two</span>
+                    </div>
+                
+                    <div class="slideshow slideshow-none">
+                        <img src="https://wallpaperaccess.com/full/235804.jpg">
+                        <span class="slideshow-caption">Caption Three</span>
+                    </div>
+                
+                    <a class="slideshow-prevBtn" onclick="btnSlide(-1)">&#10094;</a>
+                    <a class="slideshow-nextBtn" onclick="btnSlide(1)">&#10095;</a>
+                </div>
+                <br>
+                
+                <div class="slideshow-info">
+                    <span class="slideshow-dot" onclick="currentSlide(1)"></span>
+                    <span class="slideshow-dot" onclick="currentSlide(2)"></span>
+                    <span class="slideshow-dot" onclick="currentSlide(3)"></span>
+                </div>
             </div>
             <div class="col-6">
                 <div class="p-3">
                     <h1 class="intro-title">Hello world!</h1>
-                    <p class="intro-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu volutpat lorem. Morbi in nibh interdum, rutrum enim quis, eleifend eros. Phasellus a massa vitae turpis dictum pretium eget a tortor. Curabitur ac ultrices quam, eu ultricies purus. Morbi fringilla nibh ut libero tincidunt, ut pharetra orci maximus. Sed lacinia erat suscipit vehicula consectetur. Quisque mauris nulla, aliquam at orci sit amet, ultrices ullamcorper odio. Suspendisse potenti.</p>
+                    <p class="intro-text">Lorem ipsum dolor sit amet, <span class="tooltip">consectetur<span class="tooltip-data tooltip-top">Hello World</span></span> adipiscing elit. Nullam eu volutpat lorem. Morbi in nibh interdum, rutrum enim quis, eleifend eros. Phasellus a massa vitae turpis dictum pretium eget a tortor. Curabitur <span class="tooltip">consectetur<span class="tooltip-data tooltip-top">Hello World</span></span> ac ultrices quam, eu ultricies purus. Morbi fringilla nibh ut libero tincidunt, ut pharetra orci maximus. Sed lacinia erat suscipit vehicula <span class="tooltip">consectetur<span class="tooltip-data tooltip-top">Hello World</span></span>. Quisque mauris nulla, aliquam at orci sit amet, ultrices ullamcorper odio. Suspendisse potenti.</p>
                     <a href="#achievement" class="btn theme-reverse">My achievement</a>
                     <a href="#contact" class="btn theme-adjust">Contact me</a>
                 </div>
@@ -45,7 +71,7 @@
                     <div class="box m-2">
                         <img src="achievements.jpg" alt="My achievement">
                         <h2 class="box-title">First achievement</h2>
-                        <p class="box-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu volutpat lorem. Morbi in nibh interdum, rutrum enim quis, eleifend eros. Phasellus a massa vitae turpis dictum pretium eget a tortor. Curabitur ac ultrices quam, eu ultricies purus. Morbi fringilla nibh ut libero tincidunt, ut pharetra orci maximus. Sed lacinia erat suscipit vehicula consectetur. Quisque mauris nulla, aliquam at orci sit amet, ultrices ullamcorper odio. Suspendisse potenti.</p>
+                        <p class="box-text">Lorem ipsum dolor sit amet, consectetur <span class="tooltip">adipiscing<span class="tooltip-data tooltip-top">Hello World</span></span> elit. Nullam eu volutpat lorem. Morbi in nibh interdum, rutrum enim quis, eleifend eros. Phasellus a massa vitae turpis dictum pretium eget a tortor. Curabitur ac ultrices quam, eu ultricies purus. Morbi fringilla nibh ut libero tincidunt, ut pharetra orci maximus. Sed lacinia erat suscipit vehicula consectetur. Quisque mauris nulla, aliquam at orci sit amet, ultrices ullamcorper odio. Suspendisse potenti.</p>
                     </div>
                 </div>
                 <div class="col-4">
@@ -63,24 +89,53 @@
                     </div>
                 </div>
             </div>
+            <div class="accordion btn btn-dark" data-panel = "Section1">Fourth Achievements</div>
+            <div class="accordion-panel" id="Section1">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+            <div class="accordion btn btn-dark" data-panel = "Section2">Fifth Achievements</div>
+            <div class="accordion-panel" id="Section2">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
         </div>
-        <div class="my-5" id="contact">
-            <form action="#" class="box p-3 box-shadow theme-adjust">
-                <div class="form-group">
-                    <h1 class="heading-title">Contact</h1>
+        <div class="my-5 py-5" id="contact">
+            <div class="box theme-reverse">
+                <div class="tab theme-adjust" data-tab = "exampleTab">
+                    <button class="tab-btn" data-content="contactform">Contact Form</button>
+                    <button class="tab-btn" data-content= "contactemail">Email</button>
                 </div>
-                <div class="form-group">
-                    <p class="form-label">Email:</p>
-                    <input type="email" class="form-control">
+                <div class="tab-contents" id="exampleTab">
+                    <div id="contactform" class="tab-content tab-content-active">
+                        <p>
+                            <form action="#" class="box p-3 box-shadow theme-adjust">
+                                <div class="form-group">
+                                    <h1 class="heading-title">Contact</h1>
+                                </div>
+                                <div class="form-group">
+                                    <p class="form-label">Email:</p>
+                                    <input type="email" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <p class="form-label">Message:</p>
+                                    <textarea class="form-control"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <input type="submit" value="Submit" class="btn theme-reverse form-control">
+                                </div>
+                            </form>
+                        </p>
+                    </div>
+                    <div id="contactemail" class="tab-content">
+                        <h1>Lorem ipsum</h1>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur id metus ligula. 
+                            Ut neque tortor, vulputate ut placerat id, molestie at risus. Curabitur velit augue, facilisis eu nisi et, 
+                            placerat dapibus dui. Etiam tempor nulla mi, a porta nisl sagittis ut. Aenean ullamcorper maximus nulla, rutrum sodales ligula. 
+                            Nulla urna dui, efficitur in rutrum a, viverra eu nunc. Ut non rhoncus turpis, at vulputate mauris. Suspendisse et efficitur massa, in aliquam justo.
+                        </p>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <p class="form-label">Message:</p>
-                    <textarea class="form-control"></textarea>
-                </div>
-                <div class="form-group">
-                    <input type="submit" value="Submit" class="btn theme-reverse form-control">
-                </div>
-            </form>
+            </div>
         </div>
     </div>
 </body>
